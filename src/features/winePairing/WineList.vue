@@ -8,7 +8,7 @@ const props = defineProps<{
 
 <template>
     <ul class="p-5 text-lg font-semibold italic text-gray-700">
-        <li v-for="wine in pairedWines"
+        <li v-for="wine in props.pairedWines"
             class="capitalize">
             {{ wine }}
         </li>

@@ -13,7 +13,7 @@ const props = defineProps<{
         <h1 class="font-bold text-3xl mb-15">
             Directives
         </h1>
-        <DirectiveStagesWidget v-for="item in instructions" 
+        <DirectiveStagesWidget v-for="item in props.instructions" 
                             :steps="item"/>
     </div>
 </template>

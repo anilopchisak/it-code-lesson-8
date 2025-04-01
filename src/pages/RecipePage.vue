@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted, watch, nextTick } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { useRecipeStore } from '../app/stores/recipeStore';
 import { loadingStatus } from '../app/types/storeTypes/requestTypes';
 import HeaderRecipePage from '../widgets/RecipePageWidgets/HeaderRecipePage.vue';
-import { mockRecipe } from '../app/mock/mockRecipe';
 import RecipeTitle from '../entities/recipe/RecipeTitle.vue';
 import { iconType } from '../app/types/commonTypes';
 import RecipeMetaInfoFull from '../entities/recipe/RecipeMetaInfoFull.vue';

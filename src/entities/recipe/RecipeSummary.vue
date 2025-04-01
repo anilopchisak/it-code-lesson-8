@@ -6,7 +6,7 @@ const props = defineProps<{
     summary: string | undefined;
 }>();
 
-const sanitizedSummary = computed(() => DOMPurify.sanitize(props.summary));
+const sanitizedSummary = computed(() => DOMPurify.sanitize(props.summary ?? ''));
 </script>
 
 <template>

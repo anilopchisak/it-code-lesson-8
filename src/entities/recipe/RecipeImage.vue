@@ -8,5 +8,5 @@ const props = defineProps<{
 
 <template>
     <div class="h-[500px] rounded-3xl bg-cover lg:w-[880px]"
-        :style="{ backgroundImage: `url(${path})` }"></div>
+        :style="{ backgroundImage: `url(${props.path})` }"></div>
 </template>

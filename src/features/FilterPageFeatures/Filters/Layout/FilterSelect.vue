@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T">
 import { ref, watch } from 'vue';
 import type { CheckboxValueType } from 'element-plus'
 import { cuisineType, dietType, intoleranceType, mealType } from '../../../../app/types/storeTypes/requestTypes.ts';
@@ -7,7 +7,7 @@ import FilterOption from './FilterOption.vue';
 const props = defineProps<{
   name: string
   options: (cuisineType | dietType | intoleranceType | mealType)[] | null
-  setFunc: (value: (cuisineType | dietType | intoleranceType | mealType)[] | null) => void
+  setFunc: (value: T[] | null) => void
   reset: boolean
 }>();
 
@@ -27,7 +27,7 @@ const handleCheckedChange = (value: CheckboxValueType[]) => {
   handleChange();
 }
 const handleChange = () => {
-  props.setFunc(checkedOptions.value as cuisineType[] | dietType[] | intoleranceType[] | mealType[] | null);
+  props.setFunc(checkedOptions.value as T[] | null);
 }
 
 watch(() => props.reset, (newValue) => {

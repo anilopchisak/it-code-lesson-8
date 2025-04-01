@@ -4,8 +4,6 @@ import { RouterView } from 'vue-router';
 import { useRecipeStore } from './app/stores/recipeStore';
 import Header from './widgets/Header.vue';
 import Footer from './widgets/Footer.vue';
-import { mock } from './app/mock/mock';
-import { loadingStatus } from './app/types/storeTypes/requestTypes';
 
 const store = useRecipeStore();
 /** Переменная для скролла вниз */
