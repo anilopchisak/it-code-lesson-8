@@ -23,10 +23,7 @@ const router = createRouter({
             component: RecipePage, 
             props: true 
         },
-    ],
-    scrollBehavior() {
-        return { top: 0, behavior: 'instant' };
-    }
+    ]
 });
 
 export default router;
