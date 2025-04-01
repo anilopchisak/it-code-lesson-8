@@ -27,22 +27,26 @@ const handleResetFilters = () => {
       name="Diet"
       :options="Object.values(dietType)"
       :setFunc="store.setDiet"
-      :reset="resetFilter"/>
+      :reset="resetFilter"
+      :checkedOptions="store.searchParams.diet"/>
     <FilterSelect
       name="Cuisine"
       :options="Object.values(cuisineType)"
       :setFunc="store.setCuisine"
-      :reset="resetFilter"/>
+      :reset="resetFilter"
+      :checkedOptions="store.searchParams.cuisine"/>
     <FilterSelect
       name="Intolerance"
       :options="Object.values(intoleranceType)"
       :setFunc="store.setIntolerance"
-      :reset="resetFilter"/>
+      :reset="resetFilter"
+      :checkedOptions="store.searchParams.intolerance"/>
     <FilterSelect
       name="Meal type"
       :options="Object.values(mealType)"
       :setFunc="store.setType"
-      :reset="resetFilter"/>
+      :reset="resetFilter"
+      :checkedOptions="store.searchParams.type"/>
     <el-button type="warning" 
                plain 
                class="mt-5"
