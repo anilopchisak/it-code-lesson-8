@@ -13,6 +13,7 @@ import { defaultImage } from '../app/utils/consts';
 import RecipeSummary from '../entities/recipe/RecipeSummary.vue';
 import IngredientListWidget from '../widgets/RecipePageWidgets/IngredientListWidget.vue';
 import DirectivesList from '../widgets/RecipePageWidgets/DirectivesList.vue';
+import { mockRecipe } from '../app/mock/mockRecipe';
 
 const route = useRoute();
 const store = useRecipeStore();
@@ -32,7 +33,9 @@ watch(() => store.selectedRecipeLoadingStatus, () => {
 });
 
 onMounted(async () => {
-    store.fetchSelectedRecipe(Number(route.params.id))
+    // store.setSelectedRecipe(mockRecipe);
+    // store.selectedRecipeLoadingStatus = loadingStatus.Success;
+    store.fetchSelectedRecipe(Number(route.params.id));
 });
 </script>
 

@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import RecipeList from '../widgets/FilterPageWidgets/RecipeList.vue';
 import Filters from '../features/FilterPageFeatures/Filters.vue';
+import { onMounted } from 'vue';
+import { useRecipeStore } from '../app/stores/recipeStore';
+
+const store = useRecipeStore();
+
+onMounted(() => {
+    // store.setRecipes(mock);
+    // store.recipesLoadingStatus = loadingStatus.Success;
+    store.fetchRecipes();
+});
 </script>
 
 <template>

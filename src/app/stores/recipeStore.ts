@@ -45,14 +45,11 @@ export const useRecipeStore = defineStore('recipeStore', () => {
         searchParams.value.offset = 0;
     }
     const resetSearchParams = () => {
-        setQuery(null);
         $reset();
         setCuisine(null);
         setDiet(null);
         setIntolerance(null);
         setType(null);
-        setSort(null);
-        setSortDirection(null);
     }
 
     const getRecipes = computed(() => recipes.value);

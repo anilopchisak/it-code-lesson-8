@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { onMounted, watch, nextTick, ref } from 'vue';
+import { watch, ref } from 'vue';
 import { RouterView } from 'vue-router';
 import { useRecipeStore } from './app/stores/recipeStore';
 import Header from './widgets/Header.vue';
 import Footer from './widgets/Footer.vue';
+import { loadingStatus } from './app/types/storeTypes/requestTypes';
+import { mock } from './app/mock/mock';
 
 const store = useRecipeStore();
 /** Переменная для скролла вниз */
@@ -11,20 +13,15 @@ const mainContainer = ref<HTMLElement | null>(null);
 
 watch(
     () => store.getRecipes,
-    async () => {
-        await nextTick();
+    () => {
         if (mainContainer.value) {
             mainContainer.value.scrollTo({
                 top: store.searchParams.offset !== 0 ? 999999 : 0,
-                behavior: 'instant'});
+                behavior: 'auto'});
         }
     },
     { deep: true }
 );
-
-onMounted(() => {
-    store.fetchRecipes();
-});
 </script>
 
 <template>
