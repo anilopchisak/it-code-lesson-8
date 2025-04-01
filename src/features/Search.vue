@@ -19,11 +19,9 @@ const fetchSuggestions = (queryString: string, callback: (suggestions: { value: 
 }
 
 const handleSearch = () => {
-    if (searchValue.value) {
-        store.setQuery(searchValue.value.trim().toLowerCase());
-        store.fetchRecipes();
-        router.push(FILTER_PAGE_ROUTE);
-    }
+    store.setQuery(searchValue.value ? searchValue.value.trim().toLowerCase() : null);
+    store.fetchRecipes();
+    router.push(FILTER_PAGE_ROUTE);
 }
 
 watch(searchValue, () => {
@@ -31,9 +29,6 @@ watch(searchValue, () => {
         store.setAutocompleteParams(searchValue.value);
         const debouncedFetchAutocomplete = debounce(store.fetchAutocomplete);
         debouncedFetchAutocomplete();
-    }
-    else {
-        store.setQuery(null);
     }
 });
 </script>
