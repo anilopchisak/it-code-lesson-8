@@ -32,8 +32,6 @@ watch(() => store.selectedRecipeLoadingStatus, () => {
 });
 
 onMounted(async () => {
-    // store.setSelectedRecipe(mockRecipe);
-    // store.selectedRecipeLoadingStatus = loadingStatus.Success;
     store.fetchSelectedRecipe(Number(route.params.id));
 });
 </script>

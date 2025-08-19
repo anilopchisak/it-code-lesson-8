@@ -7,8 +7,6 @@ import { useRecipeStore } from '../app/stores/recipeStore';
 const store = useRecipeStore();
 
 onMounted(() => {
-    // store.setRecipes(mock);
-    // store.recipesLoadingStatus = loadingStatus.Success;
     store.fetchRecipes();
 });
 </script>
