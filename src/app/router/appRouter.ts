@@ -5,7 +5,7 @@ import HomePage from '../../pages/HomePage.vue';
 import { FILTER_PAGE_ROUTE, HOME_PAGE_ROUTE, RECIPE_PAGE_ROUTE } from './routes';
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/it-code-lesson-8/'),
     routes: [
         { 
             path: HOME_PAGE_ROUTE, 
