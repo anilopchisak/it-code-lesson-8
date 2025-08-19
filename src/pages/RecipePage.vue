@@ -13,7 +13,6 @@ import { defaultImage } from '../app/utils/consts';
 import RecipeSummary from '../entities/recipe/RecipeSummary.vue';
 import IngredientListWidget from '../widgets/RecipePageWidgets/IngredientListWidget.vue';
 import DirectivesList from '../widgets/RecipePageWidgets/DirectivesList.vue';
-import { mockRecipe } from '../app/mock/mockRecipe';
 
 const route = useRoute();
 const store = useRecipeStore();
