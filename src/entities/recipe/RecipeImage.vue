@@ -11,6 +11,6 @@ const imageSrc = ref<string | undefined>(props.path);
 
 <template>
     <div class="h-[500px] rounded-3xl bg-cover lg:w-[880px]"
-        :style="{ backgroundImage: `url(${imageSrc})` }"
+        :style="{ backgroundImage: `url(${props.path})` }"
         @error="imageSrc = defaultImage"></div>
 </template>

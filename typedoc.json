@@ -1,0 +1,10 @@
+{
+    "entryPoints": [
+        "src/main.ts", 
+        "src/app/types/storeTypes/recipeType.ts",
+        "src/app/types/storeTypes/requestTypes.ts",
+        "src/app/types/commonTypes.ts",
+    ],
+    "out": "docs"
+}
+  
