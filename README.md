@@ -1,5 +1,20 @@
-# Vue 3 + TypeScript + Vite
+# Сайт для поиска рецептов
+Сайт для просмотра списка рецептов и детальной информации о них. Содержит страницу списка с фильтрацией, поиском и бесконечным скроллом. В качестве API взят Spoonacular API.
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### Стек технологий
+- TypeScript
+- Vite
+- Vue 3
+- Pinia
+- Axios
+- TailwindCSS
+- Element Plus
+- TypeDoc
+- Feature-Sliced Design
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+### Функционал
+- фильтрация рецептов и поиск с debounce
+- бесконечный скролл
+- индикатор загрузки
+- просмотр страницы рецепта
+- документация интерфейсов через TypeDoc
